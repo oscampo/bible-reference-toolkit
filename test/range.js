@@ -1,6 +1,6 @@
-import test from 'ava';
-import Reference from '../lib/reference';
-import Range from '../lib/range';
+const test = require('ava');
+const Reference = require('../lib/reference');
+const Range = require('../lib/range');
 
 test('distance() returns the distance between the References', (t) => {
   let start = new Reference('Genesis 1:1');

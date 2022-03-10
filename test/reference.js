@@ -1,5 +1,5 @@
-import test from 'ava';
-import Reference from '../lib/reference';
+const test = require('ava');
+const Reference = require('../lib/reference');
 
 test('isChapter() returns true for chapter references', (t) => {
   let ref = new Reference('Genesis 1');
