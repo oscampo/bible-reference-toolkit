@@ -18,11 +18,12 @@ bible.js is a JavaScript package for both Node and the browser (via Bower) for h
 
 The `biblejs` module exposes three top level exports:
 
+```
   const Bible = require('biblejs');
   let Reference = Bible.Reference // A class representing a single verse or chapter
   let Range = Bible.Range // A class representing a range of verses
   let Books = Bible.Books // A reference array containing data on the names and number of chapters/verses for each book in the Bible
-
+```
 
 ## Reference
 
