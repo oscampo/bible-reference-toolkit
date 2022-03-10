@@ -66,14 +66,14 @@ Returns the verse id (i.e. the number of the verse if you started from Genesis 1
     var ref = new Reference("Genesis 1:1");
     ref.toVerseId() // 1
 
-### #toChapterId()
+### toChapterId()
 Returns the chapter id (i.e. the number of the chapter if you started from Genesis 1 and counted up to it).
 
     var ref = new Reference("Genesis 7");
     ref.toChapterId() // 7
 
 
-### #toBookId()
+### toBookId()
 Returns the book id (i.e. the number of the book if you started from Genesis and counted up to it).
 
     var ref = new Reference("Exodus");
