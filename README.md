@@ -1,4 +1,4 @@
-# bible.js
+# BibleJS Name Converter
 
 bible.js is a JavaScript package for both Node and the browser (via Bower) for handling Bible references. It can:
 
@@ -10,9 +10,7 @@ bible.js is a JavaScript package for both Node and the browser (via Bower) for h
 
 # Installation
 
-**node**
-
-    npm install --save biblejs
+~~npm install --save biblejs~~ (wip)
 
 # Usage
 
