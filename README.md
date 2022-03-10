@@ -1,6 +1,7 @@
 # BibleJS Name Converter
+[![CodeQL](https://github.com/tim-hub/biblejs-name-converter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/tim-hub/biblejs-name-converter/actions/workflows/codeql-analysis.yml)
 
-bible.js is a JavaScript package for both Node and the browser (via Bower) for handling Bible references. It can:
+BibleJS Name Converter is a JavaScript package for both Node and the browser (via Bower) for handling Bible references. It can:
 
   * parse textual references into a standard, index based format
   * convert a textual reference to an absolute verse number
