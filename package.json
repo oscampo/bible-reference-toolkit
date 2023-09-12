@@ -2,9 +2,10 @@
   "name": "biblejs-name-converter",
   "version": "2.0.0",
   "description": "Normalize bible references, convert them to machine readable formats, query and manipulate them",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "scripts": {
-    "test": "ava"
+    "test": "bun test src/test/*.test.ts ",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,13 +16,17 @@
     "math",
     "query"
   ],
-  "author": "@tim-hub, Dave Wasmer",
+  "author": "@tim-hub",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davewasmer/biblejs/issues"
+    "url": "https://github.com/tim-hub/biblejs-name-converter/issues"
   },
-  "homepage": "https://github.com/davewasmer/biblejs",
+  "homepage": "https://github.com/tim-hub/biblejs-name-converter",
   "devDependencies": {
-    "ava": "^4.1.0"
+    "bun-types": "^1.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }

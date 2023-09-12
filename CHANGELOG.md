@@ -8,5 +8,5 @@
   * 0.0.7 forgot to include the updated built file for bower, re-releasing with it now
 
 # 0.0.7
-  * added `Reference.bookNameFromId`
+  * added `ReferenceTest.bookNameFromId`
   * fixed splitting of book names
