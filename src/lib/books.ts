@@ -1,43 +1,43 @@
 import {
   generateOrdinalNameVariations,
   readJSONFilesInDirectory,
-} from '../utils/utils'
+} from '../utils/utils';
 
-import baseData from '../data/base.json'
-import path from 'path'
+import baseData from '../data/base.json';
+import path from 'path';
 
 type Book = {
-  names: string[]
-  verses: number[]
-  startWithNumber?: boolean
-  startNumber?: number
-}
+  names: string[];
+  verses: number[];
+  startWithNumber?: boolean;
+  startNumber?: number;
+};
 
-const BookWithNamesAndChapterVersesCount: Book[] = []
+const BookWithNamesAndChapterVersesCount: Book[] = [];
 
 const allTranslations = readJSONFilesInDirectory(
   path.join(__dirname, '../data/translations/')
-)
+);
 
 for (let i = 0; i < 66; i++) {
   // @ts-ignore
-  const book = baseData[i + 1]
+  const book = baseData['' + (i + 1)];
 
-    // @ts-ignore
+  // @ts-ignore
   (await allTranslations).forEach((translation: any) => {
-    let newNames = translation[i]
+    let newNames = translation[i];
     if (book?.names?.length) {
-      newNames = book.names.concat(translation[i])
+      newNames = book.names.concat(translation[i]);
     }
-    book.names = newNames //todo use set here
-  })
-  BookWithNamesAndChapterVersesCount.push(book)
+    book.names = newNames; //todo use set here
+  });
+  BookWithNamesAndChapterVersesCount.push(book);
 }
 
 BookWithNamesAndChapterVersesCount.forEach((book, index) => {
   if (book?.startNumber && book?.startNumber > 0) {
-    book.names = generateOrdinalNameVariations(book.startNumber, book.names)
+    book.names = generateOrdinalNameVariations(book.startNumber, book.names);
   }
-})
+});
 
-export default BookWithNamesAndChapterVersesCount
+export default BookWithNamesAndChapterVersesCount;
