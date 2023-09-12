@@ -15,7 +15,7 @@ type Book = {
 
 const BookWithNamesAndChapterVersesCount: Book[] = [];
 
-const allTranslations = readJSONFilesInDirectory(
+const allWesternTranslations = readJSONFilesInDirectory(
   path.join(__dirname, '../data/translations/')
 );
 
@@ -24,7 +24,7 @@ for (let i = 0; i < 66; i++) {
   const book = baseData['' + (i + 1)];
 
   // @ts-ignore
-  (await allTranslations).forEach((translation: any) => {
+  (await allWesternTranslations).forEach((translation: any) => {
     let newNames = translation[i];
     if (book?.names?.length) {
       newNames = book.names.concat(translation[i]);
