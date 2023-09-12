@@ -20,9 +20,11 @@ const allTranslations = readJSONFilesInDirectory(
 )
 
 for (let i = 0; i < 66; i++) {
+  // @ts-ignore
   const book = baseData[i + 1]
 
-  ;(await allTranslations).forEach((translation) => {
+    // @ts-ignore
+  (await allTranslations).forEach((translation: any) => {
     let newNames = translation[i]
     if (book?.names?.length) {
       newNames = book.names.concat(translation[i])
