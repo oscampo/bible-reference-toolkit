@@ -1,8 +1,7 @@
-import { readJSONFilesInDirectory } from '../utils/utils';
-import path from 'path';
+import { readJSONFilesInDirectory } from '../utils/utils'
+import path from 'path'
 
 describe('test translation structure', () => {
-
   test('test english', async () => {
     // read the file
     const en = await import('./translations/en.json')
@@ -18,8 +17,9 @@ describe('test translation structure', () => {
   })
 
   test('test all translations', async () => {
-
-    const allTranslations = await readJSONFilesInDirectory(path.join(__dirname, './translations/'));
+    const allTranslations = await readJSONFilesInDirectory(
+      path.join(__dirname, './translations/')
+    )
 
     // check if it is an array
     expect(Array.isArray(allTranslations)).toBe(true)

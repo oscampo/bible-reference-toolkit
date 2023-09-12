@@ -5,7 +5,9 @@
   "main": "dist/src/index.js",
   "scripts": {
     "test": "bun test src/**/*.test.ts ",
-    "build": "tsc"
+    "build": "tsc",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "homepage": "https://github.com/tim-hub/biblejs-name-converter",
   "devDependencies": {
     "bun-types": "^1.0.1",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
