@@ -4,7 +4,7 @@
   "description": "Normalize bible references, convert them to machine readable formats, query and manipulate them",
   "main": "index.ts",
   "scripts": {
-    "test": "ava"
+    "test": "bun test"
   },
   "repository": {
     "type": "git",
@@ -15,16 +15,14 @@
     "math",
     "query"
   ],
-  "author": "@tim-hub, Dave Wasmer",
+  "author": "@tim-hub",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/davewasmer/biblejs/issues"
   },
   "homepage": "https://github.com/davewasmer/biblejs",
   "devDependencies": {
-    "ava": "^4.1.0",
-    "bun-types": "^1.0.1",
-    "jest": "^29.6.4"
+    "bun-types": "^1.0.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

@@ -1,11 +1,10 @@
-var books = require('./books')
-
+import books from './books';
 // Internally, no strings are stored - only numbers.
 //
 // "id"s are UIDs, numbers are relative to parent unit; e.g.
 // Mark 2 and James 2 have different ids, but the same number.
 
-function Reference(reference) {
+function Reference(reference: string) {
   if (!reference) {
     throw new Error('You must supply a Bible reference, either a string (i.e. "Mark 2") or an object (i.e. { book: 1, chapter: 2, verse: 1 })');
   }
@@ -230,4 +229,4 @@ Reference.chaptersUpToBookId = function chaptersUpToBookId(bookId) {
 };
 
 
-module.exports = Reference;
+export default Reference;

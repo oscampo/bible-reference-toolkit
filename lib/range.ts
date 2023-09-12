@@ -1,6 +1,6 @@
-var Reference = require('./reference');
+import Reference from './reference';
 
-function Range(start, end) {
+function Range(start: number, end: number) {
   // Ensure start and end are reference objects
   if (!(start instanceof Reference)) {
     start = new Reference(start);
@@ -27,9 +27,9 @@ Range.prototype.distance = function distance() {
   };
 };
 
-Range.isRange = function isRange(value) {
+Range.isRange = function isRange(value: string | string[]) {
   return (value instanceof Range) || value.indexOf('-') > -1;
 };
 
 
-module.exports = Range;
+export default Range;
