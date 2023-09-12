@@ -1,5 +1,5 @@
 {
-  "name": "biblets",
+  "name": "biblejs-name-converter",
   "version": "2.0.2",
   "description": "Normalize bible references, convert them to machine readable formats, query and manipulate them",
   "main": "dist/src/index.js",
