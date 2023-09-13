@@ -4,8 +4,8 @@
   "description": "Normalize bible references, convert them to machine readable formats, query and manipulate them",
   "main": "dist/src/index.js",
   "scripts": {
-    "test": "bun test src/**/*.test.ts ",
-    "build": "tsc",
+    "test": "nx exec -- bun test src/**/*.test.ts ",
+    "build": "nx exec -- tsc",
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write"
   },
@@ -27,9 +27,25 @@
   "devDependencies": {
     "bun-types": "^1.0.1",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "nx": "16.8.1",
+    "nx-cloud": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "nx": {
+    "targets": {
+      "test": {
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      },
+      "build": {
+        "outputs": [
+          "{projectRoot}/dist"
+        ]
+      }
+    }
   }
 }
