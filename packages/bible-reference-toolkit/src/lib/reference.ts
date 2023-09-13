@@ -148,7 +148,7 @@ class Reference implements IReference {
 
   // Get the number of verses in the given book id
   public static versesInBookId(bookId: number): number {
-    return books[bookId - 1].verses.reduce(function sum(a, b) {
+    return books[bookId - 1].verses.reduce(function sum(a: number, b: number) {
       return a + b;
     });
   }

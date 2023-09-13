@@ -1,35 +1,46 @@
 {
-  "name": "biblejs-name-converter",
-  "version": "2.0.2",
-  "description": "Normalize bible references, convert them to machine readable formats, query and manipulate them",
-  "main": "dist/src/index.js",
-  "scripts": {
-    "test": "bun test src/**/*.test.ts ",
-    "build": "tsc",
-    "prettier": "prettier . --check",
-    "prettier:fix": "prettier . --write"
-  },
+  "name": "bible-reference-toolkit-monorepo",
+  "version": "0,0,0",
+  "description": "Mono repo for bible-reference-toolkit packages",
+  "author": "@tim-hub",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tim-hub/biblejs-name-converter"
+    "url": "https://github.com/tim-hub/bible-reference-toolkit"
   },
-  "keywords": [
-    "bible",
-    "math",
-    "query"
-  ],
-  "author": "@tim-hub",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tim-hub/biblejs-name-converter/issues"
+    "url": "https://github.com/tim-hub/bible-reference-toolkit/issues"
   },
-  "homepage": "https://github.com/tim-hub/biblejs-name-converter",
+  "homepage": "https://github.com/tim-hub/bible-reference-toolkit",
+  "scripts": {
+    "test:all": " nx run-many -t test",
+    "build:all": " nx run-many -t build"
+  },
   "devDependencies": {
+    "@nx/js": "16.8.1",
     "bun-types": "^1.0.1",
+    "nx": "16.8.1",
+    "nx-cloud": "latest",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "nx": {
+    "targets": {
+      "test": {
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      },
+      "build": {
+        "outputs": [
+          "{projectRoot}/dist"
+        ]
+      }
+    }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
