@@ -11,12 +11,7 @@
     "url": "https://github.com/tim-hub/bible-reference-toolkit/issues"
   },
   "homepage": "https://github.com/tim-hub/bible-reference-toolkit",
-  "scripts": {
-    "test": "nx exec -- bun test bible-reference-toolkit/**/*.test.ts ",
-    "build": "nx exec -- tsc",
-    "prettier": "prettier . --check",
-    "prettier:fix": "prettier . --write"
-  },
+  "scripts": {},
   "devDependencies": {
     "@nx/js": "16.8.1",
     "bun-types": "^1.0.1",
