@@ -82,8 +82,7 @@
     ]
   },
   "include": [
-    "src/**/*",
-    "src/data/translations/*.json"
+    "./"
   ],
   "exclude": [
     "node_modules",
