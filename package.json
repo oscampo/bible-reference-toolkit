@@ -12,7 +12,8 @@
   },
   "homepage": "https://github.com/tim-hub/bible-reference-toolkit",
   "scripts": {
-    "test": "bun test packages/bible-books/src/data/translations.test.ts "
+    "test:all": " nx run-many -t test",
+    "build:all": " nx run-many -t build"
   },
   "devDependencies": {
     "@nx/js": "16.8.1",
